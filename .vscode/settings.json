@@ -1,0 +1,6 @@
+{
+    "liveServer.settings.NoBrowser": true,
+    "liveServer.settings.CustomBrowser": "chrome",
+    "liveServer.settings.multiRootServer.multiRootServer": false,
+    "liveServer.settings.AdvanceCustomBrowserCmdLine": "chrome --incognito --new-window \"http:http://localhost/Fasilkom_Camp_2025\""
+}

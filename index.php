@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desa Kampunganyar</title>
+    <title>Desa Kebontunggul</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -206,9 +206,9 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'><rect width='40' height='40' fill='%2328a745'/><text x='20' y='25' text-anchor='middle' fill='white' font-family='Arial' font-size='12' font-weight='bold'>DK</text></svg>" alt="Logo">
-                <span class="ms-2 fw-bold">Desa Kampunganyar</span>
+            <a class="navbar-brand" href="#home">
+                <img src="img/Logo Desa Kebontunggal.png" alt="Logo_Desa">
+                <span class="ms-2 fw-bold">Desa Kebontunggul</span>
             </a>
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -235,8 +235,8 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="hero-content">
-                        <h1>Selamat Datang di<br>Desa Kampunganyar</h1>
-                        <p class="lead mb-4">Website resmi desa yang menyajikan informasi terkini tentang pemerintahan, layanan, dan kegiatan masyarakat Desa Kampunganyar.</p>
+                        <h1>Selamat Datang di<br>Desa Kebontunggul</h1>
+                        <p class="lead mb-4">Website resmi desa yang menyajikan informasi terkini tentang pemerintahan, layanan, dan kegiatan masyarakat Desa Kebontunggul.</p>
                         <div>
                             <a href="#profil" class="btn btn-primary me-3">Selengkapnya</a>
                             <a href="#kontak" class="btn btn-outline-light">Hubungi Kami</a>
@@ -271,15 +271,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center mb-5">
-                    <h2>Peta Desa Kampunganyar</h2>
-                    <p>Lokasi dan Batas Wilayah Desa Kampunganyar</p>
+                    <h2>Peta Desa Kebontunggul</h2>
+                    <p>Lokasi dan Batas Wilayah Desa Kebontunggul</p>
                 </div>
                 <div class="col-12">
                     <div class="map-container">
                         <div class="map-placeholder">
                             <div class="text-center">
                                 <i class="fas fa-map-marked-alt fa-3x mb-3"></i>
-                                <p>Peta Desa Kampunganyar</p>
+                                <p>Peta Desa Kebontunggul</p>
                             </div>
                         </div>
                     </div>
@@ -294,7 +294,7 @@
             <div class="row">
                 <div class="col-12 text-center mb-5">
                     <h2>Aparatur Desa</h2>
-                    <p>Struktur Pemerintahan Desa Kampunganyar</p>
+                    <p>Struktur Pemerintahan Desa Kebontunggul</p>
                 </div>
             </div>
             <div class="row">
@@ -336,7 +336,7 @@
             <div class="row">
                 <div class="col-12 text-center mb-5">
                     <h2>Administrasi Penduduk</h2>
-                    <p>Data kependudukan Desa Kampunganyar berdasarkan data terbaru</p>
+                    <p>Data kependudukan Desa Kebontunggul berdasarkan data terbaru</p>
                 </div>
             </div>
             <div class="row text-center">
@@ -395,7 +395,7 @@
             <div class="row">
                 <div class="col-12 text-center mb-5">
                     <h2>Berita <span class="text-primary">Desa</span></h2>
-                    <p>Informasi terkini dan kegiatan Desa Kampunganyar</p>
+                    <p>Informasi terkini dan kegiatan Desa Kebontunggul</p>
                 </div>
             </div>
             <div class="row">
@@ -423,7 +423,7 @@
                     <div class="card news-card border-0">
                         <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'><rect width='400' height='200' fill='%23ffc107'/><text x='200' y='100' text-anchor='middle' fill='white' font-family='Arial' font-size='16'>Festival Desa</text></svg>" class="card-img-top news-img" alt="Berita">
                         <div class="card-body">
-                            <h5 class="card-title">Festival Budaya Desa Kampunganyar</h5>
+                            <h5 class="card-title">Festival Budaya Desa Kebontunggul</h5>
                             <p class="card-text">Perayaan festival budaya tahunan yang menampilkan kesenian lokal...</p>
                             <a href="#" class="btn btn-primary btn-sm">Baca Selengkapnya</a>
                         </div>
@@ -444,7 +444,7 @@
             <div class="row">
                 <div class="col-12 text-center mb-5">
                     <h2>Wisata Desa</h2>
-                    <p>Destinasi wisata menarik yang ada di Desa Kampunganyar</p>
+                    <p>Destinasi wisata menarik yang ada di Desa Kebontunggul</p>
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -473,7 +473,7 @@
             <div class="row">
                 <div class="col-12 text-center mb-5">
                     <h2>Galeri <span class="text-primary">Desa</span></h2>
-                    <p>Dokumentasi kegiatan dan pemandangan Desa Kampunganyar</p>
+                    <p>Dokumentasi kegiatan dan pemandangan Desa Kebontunggul</p>
                 </div>
             </div>
             <div class="row">
@@ -523,7 +523,7 @@
             <hr class="my-4">
             <div class="row">
                 <div class="col-12 text-center">
-                    <p>&copy; 2025 Desa Kampunganyar. All rights reserved.</p>
+                    <p>&copy; 2025 Desa Kebontunggul. All rights reserved.</p>
                 </div>
             </div>
         </div>
