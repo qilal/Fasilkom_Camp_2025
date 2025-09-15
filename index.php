@@ -14,7 +14,8 @@
         }
 
         body {
-            padding-top: 70px; /* PERBAIKAN: Memberi ruang untuk navbar fixed-top */
+            padding-top: 70px;
+            /* PERBAIKAN: Memberi ruang untuk navbar fixed-top */
         }
 
         .navbar-brand img {
@@ -72,7 +73,8 @@
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s;
-            height: 100%; /* PERBAIKAN: Membuat semua kartu sama tinggi */
+            height: 100%;
+            /* PERBAIKAN: Membuat semua kartu sama tinggi */
         }
 
         .aparatur-card:hover {
@@ -83,7 +85,8 @@
             width: 100px;
             height: 100px;
             border-radius: 50%;
-            margin: 0 auto 15px; /* PERBAIKAN: Posisi & margin lebih baik */
+            margin: 0 auto 15px;
+            /* PERBAIKAN: Posisi & margin lebih baik */
             object-fit: cover;
         }
 
@@ -110,7 +113,7 @@
             .section-padding {
                 padding: 60px 0;
             }
-            
+
             .kepala-desa-section .text-center {
                 margin-top: 30px;
             }
@@ -123,7 +126,8 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm"> <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+        <div class="container">
             <a class="navbar-brand" href="#home">
                 <img src="img/Logo Desa Kebontunggal.png" alt="Logo_Desa">
                 <span class="ms-2 fw-bold">Desa Kebontunggul</span>
@@ -186,9 +190,15 @@
                     <p class="text-muted">Lokasi dan Batas Wilayah Desa Kebontunggul</p>
                 </div>
                 <div class="col-12">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.578663678018!2d112.4389916152758!3d-7.511883394582158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78086338e55e51%3A0x442e31641031a0e!2sBalai%20Desa%20Kebontunggul!5e0!3m2!1sen!2sid!4v1663162734185!5m2!1sen!2sid"
-                            width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="map-container ratio ratio-16x9">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15818.144090001313!2d112.47749574487904!3d-7.625354928241803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78710d69cddec7%3A0x356d58943d3ee7fd!2sKebontunggul%2C%20Kec.%20Gondang%2C%20Kabupaten%20Mojokerto%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1757948855711!5m2!1sid!2sid"
+                            width="100%"
+                            height="450"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
                     </div>
                 </div>
             </div>
@@ -205,7 +215,7 @@
             </div>
             <div id="aparaturCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner" id="aparaturCarouselInner">
-                    </div>
+                </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#aparaturCarousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
@@ -260,7 +270,7 @@
             <p class="text-muted">Kadus II</p>
         </div>
     </div>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         // Smooth scrolling
@@ -296,7 +306,7 @@
             function setupCarousel() {
                 // Hapus item lama sebelum membuat yang baru
                 carouselInner.innerHTML = '';
-                
+
                 let itemsPerSlide = 4;
                 if (window.innerWidth < 768) {
                     itemsPerSlide = 1; // 1 item di layar HP
@@ -317,14 +327,14 @@
 
                     // Ambil beberapa item untuk slide ini
                     const itemsForThisSlide = Array.from(aparaturItems).slice(i, i + itemsPerSlide);
-                    
+
                     itemsForThisSlide.forEach(itemData => {
                         const col = document.createElement("div");
                         // Tentukan class kolom Bootstrap berdasarkan jumlah item per slide
                         if (itemsPerSlide === 4) col.className = "col-lg-3 col-md-6";
                         else if (itemsPerSlide === 2) col.className = "col-md-6";
                         else col.className = "col-12";
-                        
+
                         // Buat struktur kartu di dalam kolom
                         col.innerHTML = `
                             <div class="aparatur-card bg-white">
