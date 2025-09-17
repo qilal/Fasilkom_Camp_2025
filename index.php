@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desa Kebontunggul</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    
     <style>
         :root {
             --primary-color: #28a745;
@@ -15,7 +16,7 @@
 
         body {
             padding-top: 70px;
-            /* PERBAIKAN: Memberi ruang untuk navbar fixed-top */
+            /* Memberi ruang untuk navbar fixed-top */
         }
 
         .navbar-brand img {
@@ -24,7 +25,7 @@
 
         .hero-section {
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600"><rect width="1200" height="600" fill="%23228B22"/><circle cx="200" cy="150" r="30" fill="%23006400"/><circle cx="400" cy="200" r="25" fill="%23006400"/><circle cx="800" cy="100" r="35" fill="%23006400"/><circle cx="1000" cy="180" r="20" fill="%23006400"/><path d="M0,400 Q300,350 600,400 T1200,400 L1200,600 L0,600 Z" fill="%231e7b1e"/></svg>');
+                url('img/R.jpeg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -67,28 +68,79 @@
             border: 5px solid var(--primary-color);
         }
 
-        .aparatur-card {
-            text-align: center;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s;
-            height: 100%;
-            /* PERBAIKAN: Membuat semua kartu sama tinggi */
-        }
-
-        .aparatur-card:hover {
-            transform: translateY(-10px);
-        }
-
         .aparatur-img {
             width: 100px;
             height: 100px;
             border-radius: 50%;
             margin: 0 auto 15px;
-            /* PERBAIKAN: Posisi & margin lebih baik */
             object-fit: cover;
         }
+
+        /* --- CSS SLIDER APARATUR (DITAMBAHKAN & DISESUAIKAN) --- */
+        .slider-wrapper {
+            position: relative;
+            padding-inline: 30px; /* Memberi ruang agar tombol tidak terlalu menempel ke tepi */
+        }
+
+        .aparatur-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding-block: 20px;
+            gap: 1.5rem;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .aparatur-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .aparatur-card {
+            flex: 0 0 240px; /* Lebar tetap 240px, tidak membesar atau mengecil */
+            background-color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s;
+        }
+        
+        .aparatur-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            background-color: rgba(40, 167, 69, 0.85); /* Menggunakan warna --primary-color */
+            color: white;
+            border: none;
+            border-radius: 15px;
+            width: 50px;
+            height: 90px;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .slider-btn:hover {
+            background-color: rgba(33, 136, 56, 1);
+        }
+
+        .prev-btn {
+            left: 0px;
+        }
+
+        .next-btn {
+            right: 0px;
+        }
+        /* --- AKHIR DARI CSS SLIDER --- */
 
         .stats-section {
             background-color: var(--primary-color);
@@ -100,26 +152,15 @@
             font-weight: bold;
         }
 
-        /* PERBAIKAN: Media query lebih lengkap untuk mobile */
         @media (max-width: 768px) {
             .hero-content h1 {
                 font-size: 2.2rem;
             }
-
             .hero-section {
                 text-align: center;
             }
-
             .section-padding {
                 padding: 60px 0;
-            }
-
-            .kepala-desa-section .text-center {
-                margin-top: 30px;
-            }
-
-            .stat-number {
-                font-size: 2rem;
             }
         }
     </style>
@@ -176,30 +217,7 @@
                     <p>Puji syukur kita panjatkan kepada Allah SWT yang telah melimpahkan rahmat dan hidayah-Nya kepada kita semua. Website desa ini hadir sebagai media informasi dan komunikasi antara pemerintah desa dengan masyarakat.</p>
                 </div>
                 <div class="col-lg-6 text-center">
-                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'><circle cx='75' cy='75' r='75' fill='%23e9ecef'/><circle cx='75' cy='60' r='25' fill='%236c757d'/><path d='M30,120 Q75,90 120,120 L120,150 L30,150 Z' fill='%236c757d'/></svg>" alt="Kepala Desa" class="kepala-desa-img">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center mb-5">
-                    <h2>Peta Desa Kebontunggul</h2>
-                    <p class="text-muted">Lokasi dan Batas Wilayah Desa Kebontunggul</p>
-                </div>
-                <div class="col-12">
-                    <div class="map-container ratio ratio-16x9">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15818.144090001313!2d112.47749574487904!3d-7.625354928241803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78710d69cddec7%3A0x356d58943d3ee7fd!2sKebontunggul%2C%20Kec.%20Gondang%2C%20Kabupaten%20Mojokerto%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1757948855711!5m2!1sid!2sid"
-                            width="100%"
-                            height="450"
-                            style="border:0;"
-                            allowfullscreen=""
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                    </div>
+                    <img src="img/image.png" alt="Kepala Desa" class="kepala-desa-img">
                 </div>
             </div>
         </div>
@@ -213,152 +231,143 @@
                     <p class="text-muted">Struktur Pemerintahan Desa Kebontunggul</p>
                 </div>
             </div>
-            <div id="aparaturCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner" id="aparaturCarouselInner">
+            <!-- Ambil data dari database -->
+            <div class="slider-wrapper">
+                <div class="aparatur-container" id="aparaturSlider">
+                    <div class="aparatur-card">
+                        <img src="https://i.pravatar.cc/100?img=10" class="aparatur-img" alt="Aparatur">
+                        <h5>Rudi Hartono</h5>
+                        <p class="text-muted">Sekretaris Desa</p>
+                    </div>
+                    <div class="aparatur-card">
+                        <img src="https://i.pravatar.cc/100?img=11" class="aparatur-img" alt="Aparatur">
+                        <h5>Sugianto</h5>
+                        <p class="text-muted">Kaur Keuangan</p>
+                    </div>
+                    <div class="aparatur-card">
+                        <img src="https://i.pravatar.cc/100?img=12" class="aparatur-img" alt="Aparatur">
+                        <h5>Ratna Sari Dewi</h5>
+                        <p class="text-muted">Kaur Umum</p>
+                    </div>
+                    <div class="aparatur-card">
+                        <img src="https://i.pravatar.cc/100?img=4" class="aparatur-img" alt="Aparatur">
+                        <h5>Agung</h5>
+                        <p class="text-muted">Kadus</p>
+                    </div>
+                    <div class="aparatur-card">
+                        <img src="https://i.pravatar.cc/100?img=5" class="aparatur-img" alt="Aparatur">
+                        <h5>Sri Wahyuni</h5>
+                        <p class="text-muted">Kasi Pemerintahan</p>
+                    </div>
+                    <div class="aparatur-card">
+                        <img src="https://i.pravatar.cc/100?img=6" class="aparatur-img" alt="Aparatur">
+                        <h5>Budi Santoso</h5>
+                        <p class="text-muted">Kasi Pelayanan</p>
+                    </div>
+                    <div class="aparatur-card">
+                        <img src="https://i.pravatar.cc/100?img=7" class="aparatur-img" alt="Aparatur">
+                        <h5>Lestari</h5>
+                        <p class="text-muted">Kasi Kesejahteraan</p>
+                    </div>
+                    <div class="aparatur-card">
+                        <img src="https://i.pravatar.cc/100?img=8" class="aparatur-img" alt="Aparatur">
+                        <h5>Hendra</h5>
+                        <p class="text-muted">Kadus II</p>
+                    </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#aparaturCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#aparaturCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+
+                <button class="slider-btn prev-btn" id="prevBtn"><i class="bi bi-chevron-left"></i></button>
+                <button class="slider-btn next-btn" id="nextBtn"><i class="bi bi-chevron-right"></i></button>
             </div>
         </div>
     </section>
-
-    <div id="aparaturData" class="d-none">
-        <div class="aparatur-item">
-            <img src="https://via.placeholder.com/100" alt="Aparatur">
-            <h5>Rudi Hartono</h5>
-            <p class="text-muted">Sekretaris Desa</p>
-        </div>
-        <div class="aparatur-item">
-            <img src="https://via.placeholder.com/100" alt="Aparatur">
-            <h5>Sugianto</h5>
-            <p class="text-muted">Kaur Keuangan</p>
-        </div>
-        <div class="aparatur-item">
-            <img src="https://via.placeholder.com/100" alt="Aparatur">
-            <h5>Ratna Sari Dewi</h5>
-            <p class="text-muted">Kaur Umum</p>
-        </div>
-        <div class="aparatur-item">
-            <img src="https://via.placeholder.com/100" alt="Aparatur">
-            <h5>Agung</h5>
-            <p class="text-muted">Kadus</p>
-        </div>
-        <div class="aparatur-item">
-            <img src="https://via.placeholder.com/100" alt="Aparatur">
-            <h5>Sri Wahyuni</h5>
-            <p class="text-muted">Kasi Pemerintahan</p>
-        </div>
-        <div class="aparatur-item">
-            <img src="https://via.placeholder.com/100" alt="Aparatur">
-            <h5>Budi Santoso</h5>
-            <p class="text-muted">Kasi Pelayanan</p>
-        </div>
-        <div class="aparatur-item">
-            <img src="https://via.placeholder.com/100" alt="Aparatur">
-            <h5>Lestari</h5>
-            <p class="text-muted">Kasi Kesejahteraan</p>
-        </div>
-        <div class="aparatur-item">
-            <img src="https://via.placeholder.com/100" alt="Aparatur">
-            <h5>Hendra</h5>
-            <p class="text-muted">Kadus II</p>
-        </div>
-    </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Smooth scrolling
+    document.addEventListener("DOMContentLoaded", function() {
+        // --- Smooth scrolling untuk link navigasi (Tetap sama) ---
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
                     target.scrollIntoView({
-                        behavior: 'smooth'
+                        behavior: 'smooth',
+                        block: 'start'
                     });
                 }
             });
         });
 
-        // Navbar background on scroll
+        // --- Efek background pada Navbar saat di-scroll (Tetap sama) ---
         window.addEventListener('scroll', function() {
             const navbar = document.querySelector('.navbar');
             if (window.scrollY > 50) {
-                navbar.classList.remove('bg-light');
-                navbar.classList.add('bg-white');
+                navbar.classList.add('bg-white', 'shadow');
             } else {
-                navbar.classList.add('bg-light');
-                navbar.classList.remove('bg-white');
+                navbar.classList.remove('bg-white', 'shadow');
             }
         });
 
-        // PERBAIKAN: Logika Carousel Aparatur Desa yang Responsif
-        document.addEventListener("DOMContentLoaded", function() {
-            const aparaturItems = document.querySelectorAll("#aparaturData .aparatur-item");
-            const carouselInner = document.getElementById("aparaturCarouselInner");
+        // --- JAVASCRIPT SLIDER APARATUR (KODE BARU DENGAN AUTOPLAY) ---
+        const sliderWrapper = document.querySelector('.slider-wrapper'); // Ambil wrapper utama
+        const slider = document.getElementById('aparaturSlider');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        
+        const scrollAmount = slider.querySelector('.aparatur-card').offsetWidth + 24; // Lebar 1 card + gap
+        let autoScrollInterval;
 
-            function setupCarousel() {
-                // Hapus item lama sebelum membuat yang baru
-                carouselInner.innerHTML = '';
-
-                let itemsPerSlide = 4;
-                if (window.innerWidth < 768) {
-                    itemsPerSlide = 1; // 1 item di layar HP
-                } else if (window.innerWidth < 992) {
-                    itemsPerSlide = 2; // 2 item di layar tablet
-                }
-
-                // Kelompokkan item ke dalam slide
-                for (let i = 0; i < aparaturItems.length; i += itemsPerSlide) {
-                    const slide = document.createElement("div");
-                    slide.className = "carousel-item";
-                    if (i === 0) {
-                        slide.classList.add("active");
-                    }
-
-                    const row = document.createElement("div");
-                    row.className = "row g-4"; // g-4 untuk memberi jarak antar kartu
-
-                    // Ambil beberapa item untuk slide ini
-                    const itemsForThisSlide = Array.from(aparaturItems).slice(i, i + itemsPerSlide);
-
-                    itemsForThisSlide.forEach(itemData => {
-                        const col = document.createElement("div");
-                        // Tentukan class kolom Bootstrap berdasarkan jumlah item per slide
-                        if (itemsPerSlide === 4) col.className = "col-lg-3 col-md-6";
-                        else if (itemsPerSlide === 2) col.className = "col-md-6";
-                        else col.className = "col-12";
-
-                        // Buat struktur kartu di dalam kolom
-                        col.innerHTML = `
-                            <div class="aparatur-card bg-white">
-                                ${itemData.innerHTML}
-                            </div>
-                        `;
-                        row.appendChild(col);
-                    });
-
-                    slide.appendChild(row);
-                    carouselInner.appendChild(slide);
-                }
+        // Fungsi untuk menggeser ke slide berikutnya
+        const slideNext = () => {
+            // Cek jika sudah di ujung slider
+            // slider.scrollWidth = total lebar konten
+            // slider.clientWidth = lebar area yang terlihat
+            // slider.scrollLeft = posisi scroll saat ini
+            if (slider.scrollLeft >= (slider.scrollWidth - slider.clientWidth - 1)) {
+                // Jika sudah di akhir, kembali ke awal
+                slider.scrollLeft = 0;
+            } else {
+                // Jika belum, geser ke kanan
+                slider.scrollLeft += scrollAmount;
             }
+        };
+        
+        // Fungsi untuk memulai auto-scroll
+        const startAutoScroll = () => {
+            // Hapus interval sebelumnya untuk menghindari duplikasi
+            clearInterval(autoScrollInterval); 
+            autoScrollInterval = setInterval(slideNext, 2500); // Geser setiap 2,5 detik
+        };
+        
+        // Fungsi untuk menghentikan auto-scroll
+        const stopAutoScroll = () => {
+            clearInterval(autoScrollInterval);
+        };
 
-            // Panggil fungsi saat halaman dimuat
-            setupCarousel();
-
-            // Panggil kembali fungsi saat ukuran window berubah
-            window.addEventListener('resize', setupCarousel);
+        // Event listener untuk tombol Next
+        nextBtn.addEventListener('click', () => {
+            slideNext();
         });
-    </script>
+
+        // Event listener untuk tombol Prev
+        prevBtn.addEventListener('click', () => {
+            slider.scrollLeft -= scrollAmount;
+        });
+        
+        // Hentikan auto-scroll saat mouse masuk ke area slider
+        sliderWrapper.addEventListener('mouseenter', stopAutoScroll);
+        
+        // Mulai lagi auto-scroll saat mouse keluar dari area slider
+        sliderWrapper.addEventListener('mouseleave', startAutoScroll);
+
+        // Mulai auto-scroll saat halaman pertama kali dimuat
+        startAutoScroll();
+        
+    });
+</script>
 </body>
 
-</html>
+</html> 
 <?php //include 'includes/header.php'; 
 ?>
 <?php //include 'includes/footer.php'; 
