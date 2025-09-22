@@ -3,29 +3,105 @@
             --secondary-color: #34495e;
         }
 
-        body {
-            padding-top: 70px;
-            /* Memberi ruang untuk navbar fixed-top */
+        /* navbar */
+        /* =======================
+   Navbar Custom Styles
+======================== */
+
+        /* --- Style untuk Teks Brand --- */
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+            color: #ffffff;
+        }
+
+        .brand-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .brand-subtitle {
+            font-size: 0.8rem;
+            font-weight: 400;
+        }
+
+        /* --- Style Navbar Utama --- */
+        /* State Awal: Transparan */
+        .navbar-transparent {
+            background-color: transparent;
+            transition: background-color 0.4s ease-in-out;
+        }
+
+        /* State Setelah Scroll: Solid dengan Shadow */
+        .navbar-scrolled {
+            background-color: #1A4D2E;
+            /* Warna hijau tua seperti di contoh */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.4s ease-in-out;
+        }
+
+        /* --- Style untuk Link Navigasi --- */
+        .navbar .nav-link {
+            color: #ffffff;
+            font-weight: 500;
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent;
+            /* Garis bawah transparan */
+            transition: border-bottom-color 0.3s;
+        }
+
+        .navbar .nav-link:hover {
+            color: #ffffff;
+        }
+
+        /* Style untuk link yang aktif (ada garis bawah) */
+        .navbar .nav-link.active {
+            color: #ffffff;
+            border-bottom-color: #ffffff;
+            /* Garis bawah putih */
+        }
+
+        /* Mengubah warna ikon toggler (hamburger menu) menjadi putih */
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        .navbar-toggler {
+            border-color: rgba(255, 255, 255, 0.5);
         }
 
         .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                url('../img/R.jpeg');
+            background: url('../img/R.jpeg') no-repeat center center;
             background-size: cover;
             background-position: center;
-            color: white;
             padding: 100px 0;
-            min-height: 80vh;
-            display: flex;
+            min-height: 100vh;
+            /* display: flex; */
             align-items: center;
+            background-attachment: fixed;
+            position: relative;
         }
 
-        .hero-content h1 {
+        .hero-section::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+            /*efek gelap*/
+        }
+
+        .hero-section .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content {
             font-size: 3rem;
             font-weight: bold;
         }
 
-        .btn-primary {
+        .btn-Selengkapnya {
             background-color: var(--primary-color);
             border-color: var(--primary-color);
             padding: 12px 30px;
@@ -41,9 +117,9 @@
             padding: 80px 0;
         }
 
-        .kepala-desa-section {
+        /* .kepala-desa-section {
             background-color: #f8f9fa;
-        }
+        } */
 
         .kepala-desa-img {
             width: 250px;
@@ -108,7 +184,6 @@
             border: none;
             border-radius: 15px;
             width: 50px;
-            height: 90px;
             font-size: 1.8rem;
             display: flex;
             align-items: center;
@@ -221,4 +296,384 @@
             padding-top: 20px;
             margin-top: 40px;
             font-size: 0.85rem;
+        }
+
+        /* map */
+        .map-section {
+            padding: 80px 0;
+            background-color: #ffffff;
+            /* Warna latar belakang abu-abu muda */
+        }
+
+        .map-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .map-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            /* Warna biru tua untuk judul */
+        }
+
+        .map-header .span-highlight {
+            color: #28a745 !important;
+            /* Warna hijau primer Anda */
+        }
+
+        .map-header p {
+            font-size: 1.1rem;
+            color: #6c757d;
+            /* Warna teks abu-abu */
+        }
+
+        .map-container {
+            position: relative;
+            border-radius: 15px;
+            /* Membuat sudut iframe tumpul */
+            overflow: hidden;
+            /* Penting agar border-radius berfungsi */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            /* Efek bayangan halus */
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 500px;
+            /* Atur tinggi peta sesuai kebutuhan */
+            border: 0;
+        }
+
+        /* Populasi */
+        /* CSS Kustom (Nama class tidak sama dengan Bootstrap) */
+        .population-stats-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1D976C, #28a745);
+            /* Gradien hijau */
+            color: #ffffff;
+        }
+
+        .population-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .population-header .section-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+        }
+
+        .population-header .section-subtitle {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 15px auto 0;
+            opacity: 0.9;
+        }
+
+        .stat-item-card {
+            background: rgba(255, 255, 255, 0.15);
+            /* Latar belakang semi-transparan */
+            padding: 30px 20px;
+            border-radius: 15px;
+            /* Sudut tumpul */
+            text-align: center;
+            backdrop-filter: blur(10px);
+            /* Efek blur (untuk browser modern) */
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .stat-item-card:hover {
+            transform: translateY(-10px);
+            /* Efek mengangkat saat di-hover */
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+
+        .stat-item-card .stat-figure {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .stat-item-card .stat-description {
+            font-size: 1rem;
+            font-weight: 500;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        /* Penyesuaian untuk layar mobile agar tidak terlalu rapat */
+        @media (max-width: 767px) {
+            .stat-item-card {
+                margin-bottom: 20px;
+            }
+
+            .population-header .section-title {
+                font-size: 2.2rem;
+            }
+        }
+
+        /* APB Desa */
+        .apb-section-custom {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+            /* Latar belakang abu-abu muda */
+        }
+
+        .apb-content h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #2c3e50;
+            /* Warna judul biru tua */
+            margin-bottom: 15px;
+        }
+
+        .apb-content .year-highlight {
+            color: #28a745;
+            /* Warna hijau untuk tahun */
+        }
+
+        .apb-content .subtitle {
+            font-size: 1.1rem;
+            color: #6c757d;
+            /* Warna teks abu-abu */
+            margin-bottom: 30px;
+        }
+
+        .apb-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .info-box {
+            background-color: #ffffff;
+            padding: 20px 25px;
+            margin-bottom: 15px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
+            border-left: 5px solid;
+            transition: transform 0.3s ease;
+        }
+
+        .info-box:hover {
+            transform: scale(1.03);
+        }
+
+        .info-box.pendapatan {
+            border-left-color: #28a745;
+            /* Border hijau untuk pendapatan */
+        }
+
+        .info-box.belanja {
+            border-left-color: #0d6efd;
+            /* Border biru untuk belanja */
+        }
+
+        .info-box .info-label {
+            font-size: 1rem;
+            color: #343a40;
+        }
+
+        .info-box .info-value {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .info-box.pendapatan .info-value {
+            color: #28a745;
+        }
+
+        .info-box.belanja .info-value {
+            color: #0d6efd;
+        }
+
+        .btn-details {
+            background-color: #28a745;
+            color: #ffffff;
+            font-weight: 500;
+            padding: 12px 30px;
+            border-radius: 50px;
+            /* Membuat tombol oval */
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .btn-details:hover {
+            background-color: #218838;
+            color: #ffffff;
+        }
+
+        /* Penyesuaian untuk mobile */
+        @media (max-width: 991px) {
+            .apb-content {
+                text-align: center;
+            }
+
+            .apb-image {
+                margin-bottom: 40px;
+            }
+        }
+
+        /* wisata desa */
+        .custom-tourism-section {
+            padding: 80px 0;
+            background-color: #1e8e44;
+            /* Warna hijau utama */
+            color: #ffffff;
+        }
+
+        .tourism-section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .tourism-section-header .heading-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+        }
+
+        .tourism-section-header .heading-subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .tourism-slider-container {
+            background-color: rgba(0, 0, 0, 0.15);
+            /* Latar belakang slider semi-transparan */
+            padding: 60px;
+            border-radius: 25px;
+            /* Sudut tumpul besar */
+        }
+
+        .tourism-slide-item .slide-image {
+            width: 100%;
+            height: 400px;
+            /* Tinggi gambar yang konsisten */
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .tourism-info-panel {
+            background-color: #ffffff;
+            color: #333333;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .tourism-info-panel .info-panel-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .tourism-info-panel .info-panel-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .btn-tourism-details {
+            background-color: #1e8e44;
+            color: #ffffff;
+            padding: 10px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+            display: inline-block;
+            align-self: flex-start;
+        }
+
+        .btn-tourism-details:hover {
+            background-color: #186a3b;
+            color: #ffffff;
+        }
+
+        /* Styling untuk tombol navigasi carousel */
+        .slider-custom-control {
+            background-color: #ffffff;
+            /* Latar belakang tombol bulat putih */
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+            /* posisi */
+            transform: translateY(-50%);
+            top: 50%;
+        }
+
+        .slider-custom-control:hover {
+            opacity: 1;
+        }
+
+        .slider-custom-control .carousel-control-prev-icon,
+        .slider-custom-control .carousel-control-next-icon {
+            /* MENGHAPUS FILTER AGAR ICON MENGGUNAKAN WARNA DEFAULT ATAU WARNA BAWAAN BOOTSTRAP */
+            /* Kita bisa tambahkan background-color lagi jika ingin warna ikon yang spesifik */
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%231e8e44'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+            /* Panah kiri hijau */
+        }
+
+        .slider-custom-control .carousel-control-next-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%231e8e44'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+            /* Panah kanan hijau */
+        }
+
+        /* Tombol "Lihat Wisata Lainnya" */
+        .btn-view-more-tourism {
+            background-color: #ffffff;
+            /* Latar belakang putih */
+            color: #333333;
+            /* Warna teks hitam */
+            border: 1px solid #dddddd;
+            /* Border abu-abu tipis */
+            padding: 10px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            margin-top: 40px;
+        }
+
+        .btn-view-more-tourism:hover {
+            background-color: #f0f0f0;
+            /* sedikit abu-abu saat hover */
+            border-color: #cccccc;
+            color: #333333;
+        }
+
+        /* Responsif untuk layar kecil (Tambahan) */
+        @media (max-width: 991px) {
+            .tourism-slide-item .slide-image {
+                height: 300px;
+                /* Ketinggian gambar sedikit berkurang di mobile */
+            }
+
+            .tourism-info-panel {
+                padding: 20px;
+                /* Padding card info sedikit berkurang */
+                margin-top: 20px;
+                /* Memberi jarak antara gambar dan info di mobile */
+            }
+
+            .tourism-section-header .heading-title {
+                font-size: 2.2rem;
+            }
+
+            .tourism-slider-container {
+                padding: 30px;
+                /* Padding container slider berkurang */
+            }
         }

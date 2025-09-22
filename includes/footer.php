@@ -5,14 +5,13 @@
 
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div>
-                        <img src="https://via.placeholder.com/60" alt="Logo Desa" class="footer-logo">
-                        <img src="https://via.placeholder.com/60" alt="Logo 2" class="footer-logo">
-                        <img src="https://via.placeholder.com/60" alt="Logo 3" class="footer-logo">
+                        <img src="img/Logo_Desa_Kebontunggal-removebg-preview.png" alt="Logo Desa" class="footer-logo">
+                        <!-- <img src="https://via.placeholder.com/60" alt="Logo 2" class="footer-logo">
+                        <img src="https://via.placeholder.com/60" alt="Logo 3" class="footer-logo"> -->
                     </div>
-                    <h5 class="mt-3">Pemerintah Desa Kampunganyar</h5>
+                    <h5 class="mt-3">Pemerintah Desa Kebontuggul</h5>
                     <p>
-                        Jl. Kemuning No. 01, Dusun Kopencungking, Desa Kampunganyar, 
-                        Kecamatan Glagah, Kabupaten Banyuwangi - Kode Pos 68432
+                        9FGM+GGW, Sengon, Kebontunggul, Kec. Gondang, Kabupaten Mojokerto, Jawa Timur 61372
                     </p>
                 </div>
 
@@ -38,9 +37,9 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <h5>Jelajahi</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#">Website Kemendesa</a></li>
-                        <li><a href="#">Website Kemendagri</a></li>
-                        <li><a href="#">Cek DPT Online</a></li>
+                        <li><a href="https://kemendesa.go.id/">Website Kemendesa</a></li>
+                        <li><a href="https://kemendagri.go.id/">Website Kemendagri</a></li>
+                        <li><a href="https://cekdptonline.kpu.go.id/">Cek DPT Online</a></li>
                     </ul>
                 </div>
 

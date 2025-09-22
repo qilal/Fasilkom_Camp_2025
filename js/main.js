@@ -13,16 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // --- Efek background pada Navbar saat di-scroll (Tetap sama) ---
-    window.addEventListener('scroll', function () {
-        const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 50) {
-            navbar.classList.add('bg-white', 'shadow');
-        } else {
-            navbar.classList.remove('bg-white', 'shadow');
-        }
-    });
-
     // --- JAVASCRIPT SLIDER APARATUR (KODE BARU DENGAN AUTOPLAY) ---
     const sliderWrapper = document.querySelector('.slider-wrapper'); // Ambil wrapper utama
     const slider = document.getElementById('aparaturSlider');
@@ -77,5 +67,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Mulai auto-scroll saat halaman pertama kali dimuat
     startAutoScroll();
+
+});
+
+// Pastikan DOM sudah dimuat sepenuhnya
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Pilih elemen navbar
+    const customNavbar = document.querySelector('.navbar');
+
+    // Fungsi untuk menangani perubahan style navbar saat scroll
+    function handleNavbarScroll() {
+        // Jika posisi scroll lebih besar dari 50px
+        if (window.scrollY > 50) {
+            // Hapus class 'navbar-transparent' dan tambahkan 'navbar-scrolled'
+            customNavbar.classList.remove('navbar-transparent');
+            customNavbar.classList.add('navbar-scrolled');
+        } else {
+            // Hapus class 'navbar-scrolled' dan tambahkan 'navbar-transparent'
+            customNavbar.classList.remove('navbar-scrolled');
+            customNavbar.classList.add('navbar-transparent');
+        }
+    }
+
+    // Tambahkan event listener untuk event 'scroll' pada window
+    window.addEventListener('scroll', handleNavbarScroll);
 
 });
