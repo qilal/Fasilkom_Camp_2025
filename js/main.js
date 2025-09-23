@@ -3,6 +3,12 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
+            // --- Tambahan: handle active menu ---
+            document.querySelectorAll('.navbar .nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            this.classList.add('active');
+            // --- Smooth scroll ---
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
                 target.scrollIntoView({

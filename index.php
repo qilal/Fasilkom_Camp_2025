@@ -18,10 +18,13 @@
 
     <section id="home" class="hero-section">
         <div class="container">
-            <div class="row justify-content-center justify-content-lg-start">
-                <div class="col-lg-8 col-md-10">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10 text-center">
                     <div class="hero-content">
-                        <h1>Selamat Datang di<br>Desa Kebontunggul</h1>
+                        <h1>
+                            Selamat Datang di<br>
+                            <span class="highlight-green">Desa Kebontunggul</span>
+                        </h1>
                         <p class="lead mb-4">Website resmi desa yang menyajikan informasi terkini tentang pemerintahan, layanan, dan kegiatan masyarakat Desa Kebontunggul.</p>
                         <div>
                             <a href="#profil" class="btn btn-Selengkapnya me-2 mb-2">Selengkapnya</a>

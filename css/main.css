@@ -1,4 +1,4 @@
-        :root {
+:root {
             --primary-color: #28a745;
             --secondary-color: #34495e;
         }
@@ -99,11 +99,52 @@
         .hero-content {
             font-size: 3rem;
             font-weight: bold;
+            text-align: center;
+            margin-top: 100px;
         }
+
+        /* HERO SECTION CUSTOM FONT & STYLE */
+.hero-content h1 {
+    font-size: 3.2rem;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero-content .highlight-green {
+    color: #28a745;
+    font-weight: 900;
+}
+
+.hero-content p.lead {
+    color: #fff;
+    font-size: 1.35rem;
+    font-weight: 400;
+    margin-bottom: 32px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.btn-Selengkapnya,
+.btn-outline-light {
+    font-size: 1.15rem;
+    font-weight: 600;
+    border-radius: 25px;
+    padding: 12px 36px;
+    letter-spacing: 0.5px;
+}
 
         .btn-Selengkapnya {
             background-color: var(--primary-color);
             border-color: var(--primary-color);
+            padding: 12px 30px;
+            border-radius: 25px;
+        }
+
+        .btn-Selengkapnya:hover {
+            border: 2px solid #ffffff;
+            color: #ffffff;
+            background-color: transparent;
             padding: 12px 30px;
             border-radius: 25px;
         }
